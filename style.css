@@ -1,0 +1,97 @@
+
+.app-header {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: thin lightgrey solid;
+}
+
+.app-header .app-header--title {
+    font-size: 22px;
+    padding-left: 5px;
+}
+
+
+.trainButton {
+    width: 95%;
+    flex: 10%;
+    color: blue;
+    padding: 15px 32px;
+    font-Weight: 900;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.loadingCircle2{
+    color: blue;
+}
+
+.predictButton{
+    flex: 5%;
+    padding: 1;
+    font-Weight: 800;
+    color: blue;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+.model-performance-outerDiv > div {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    padding: 10;
+    border-style: groove;
+}
+
+.model-performance-outerDiv h2 {
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.model-performance-outerDiv h3 {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.topSection > div {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-style: groove;
+}
+
+
+*[class="trainButton"][data-dash-is-loading="true"]::before{
+    content: "Training";
+    display: inline-block;
+    color: rgb(55, 130, 228);
+    visibility: visible;
+}
+
+*[class="output-example-loading"][data-dash-is-loading="true"]{
+    visibility: hidden;
+}
+
+*[class="output-example-loading"][data-dash-is-loading="true"]::before{
+    content: "Loading...";
+    display: inline-block;
+    color: rgb(55, 130, 228);
+    visibility: visible;
+}
+
+*[class="trainButton"][data-dash-is-loading="true"] + [class="training_label"]{
+    content: "Loading...";
+    display: inline-block;
+    color: rgb(54, 87, 179);
+    visibility: visible;
+    background-color: green;
+}
+
+*[class="trainButton"][data-dash-is-loading="true"]{
+    visibility: hidden;
+}
+
